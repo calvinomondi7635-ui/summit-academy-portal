@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Summit Primary Academy management portal">
+  <title>Summit Primary Academy | School Portal</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main id="loginView" class="login-shell">
+    <section class="login-card">
+      <div class="brand-mark">SA</div>
+      <p class="eyebrow">SUMMIT PRIMARY ACADEMY</p>
+      <h1>Welcome back</h1>
+      <p class="muted">Sign in to your school workspace.</p>
+      <form id="loginForm">
+        <label>Email address<input name="email" type="email" autocomplete="username" required placeholder="you@school.com"></label>
+        <label>Password<input name="password" type="password" autocomplete="current-password" required placeholder="Your password"></label>
+        <button class="primary full" type="submit">Sign in securely</button>
+        <p id="loginError" class="error" role="alert"></p>
+      </form>
+      <p class="tiny">Demo school name — replace with the client's approved identity.</p>
+    </section>
+  </main>
+
+  <div id="appView" class="app hidden">
+    <aside class="sidebar">
+      <div class="side-brand"><div class="brand-mark small">SA</div><div><b>Summit Academy</b><small>Management portal</small></div></div>
+      <div class="user-chip"><span class="avatar" id="userInitial">A</span><div><b id="userName">User</b><small id="userRole">Role</small></div></div>
+      <nav id="navigation">
+        <button data-page="dashboard" class="nav-item active">▦ <span>Overview</span></button>
+        <button data-page="students" class="nav-item admin teacher">♙ <span>Students</span></button>
+        <button data-page="classes" class="nav-item admin teacher">▤ <span>Classes</span></button>
+        <button data-page="staff" class="nav-item admin">♧ <span>Staff & accounts</span></button>
+        <button data-page="attendance" class="nav-item admin teacher">✓ <span>Attendance</span></button>
+        <button data-page="results" class="nav-item admin teacher parent">▥ <span>Academics</span></button>
+        <button data-page="fees" class="nav-item admin parent">KSh <span>Fees</span></button>
+        <button data-page="announcements" class="nav-item">◉ <span>Announcements</span></button>
+        <button data-page="messages" class="nav-item">✉ <span>Messages</span></button>
+      </nav>
+      <button id="logoutBtn" class="logout">↪ Sign out</button>
+    </aside>
+
+    <section class="main-area">
+      <header class="topbar"><div><p class="eyebrow">SCHOOL MANAGEMENT</p><h1 id="pageTitle">Overview</h1></div><span class="live-pill">● Connected</span></header>
+      <div id="notice" class="notice hidden" role="status"></div>
+      <section id="pageContent" class="content"></section>
+    </section>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
